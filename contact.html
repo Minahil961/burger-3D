@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Burger3D</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <!-- Standard Header Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-logo" onclick="window.location.href='index.html'">Burger<span>3D</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Contact Page Layout -->
+    <main class="contact-wrapper">
+        
+        <!-- Left Side: Informational Details Block -->
+        <section class="contact-info">
+            <span class="sub-title">Get In Touch</span>
+            <h1>Let's Connect</h1>
+            <p>Have questions about catering, group orders, or just want to tell us how much you loved the 3D multi-layered stack? Send us a message!</p>
+            
+            <div class="info-details">
+                <div class="info-item">
+                    <span class="icon">📍</span>
+                    <div>
+                        <h3>Our Location</h3>
+                        <p>123 ABC Dimension Ave, Food District</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="icon">📞</span>
+                    <div>
+                        <h3>Phone Support</h3>
+                        <p>00000 3D-BURGER</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="icon">✉️</span>
+                    <div>
+                        <h3>Email Address</h3>
+                        <p>hello@burger3d.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Simple Styled Placeholder Map Block -->
+            <div class="map-placeholder">
+                <span>🗺️ Interactive Map Loading...</span>
+            </div>
+        </section>
+
+        <!-- Right Side: Contact Submission Form Card -->
+        <section class="contact-form-box">
+            <h2>Send A Message</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="userName">Your Name</label>
+                    <input type="text" id="userName" required placeholder="Miss Minahil">
+                </div>
+                
+                <div class="form-group">
+                    <label for="userEmail">Email Address</label>
+                    <input type="email" id="userEmail" required placeholder="mine@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="msgSubject">Subject</label>
+                    <input type="text" id="msgSubject" required placeholder="Catering Enquiry / Feedback">
+                </div>
+
+                <div class="form-group">
+                    <label for="userMessage">Your Message</label>
+                    <textarea id="userMessage" rows="5" required placeholder="Type your notes here..."></textarea>
+                </div>
+
+                <button type="submit" class="send-btn">Submit Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Interactive Alert Toast Banner -->
+    <div class="toast-banner" id="formToast">
+        <span class="toast-icon">🚀</span>
+        <div>
+            <h4>Message Transmitted!</h4>
+            <p>Our kitchen support crew will follow up via email shortly.</p>
+        </div>
+    </div>
+
+    <script src="contact.js"></script>
+</body>
+</html>

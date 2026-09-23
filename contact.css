@@ -1,0 +1,245 @@
+/* Core Palette Properties and Theme resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: #0b0b0d;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Fixed Navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #121216;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+}
+
+.nav-logo {
+    font-size: 26px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.nav-logo span {
+    color: #ff9f1c;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #a0a0ab;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #ff9f1c;
+}
+
+/* Split Form Container layout grid */
+.contact-wrapper {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 60px;
+}
+
+.contact-info, .contact-form-box {
+    flex: 1;
+}
+
+.sub-title {
+    color: #ff9f1c;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contact-info h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    color: #a0a0ab;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Info row layouts */
+.info-details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon {
+    font-size: 28px;
+    background-color: #121216;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.info-item h3 {
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+.info-item p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Map Mock Element */
+.map-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #121216;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a0a0ab;
+    border: 1px dashed #24242b;
+}
+
+/* Form Styling Rules */
+.contact-form-box {
+    background-color: #121216;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    height: fit-content;
+}
+
+.contact-form-box h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #24242b;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #a0a0ab;
+    font-size: 14px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #1c1c22;
+    border: 1px solid #2d2d38;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+textarea {
+    resize: none;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #ff9f1c;
+}
+
+.send-btn {
+    width: 100%;
+    background-color: #ff9f1c;
+    color: #0b0b0d;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.send-btn:hover {
+    background-color: #ffb042;
+    transform: translateY(-2px);
+}
+
+/* Slide-in Alert Popup element */
+.toast-banner {
+    position: fixed;
+    bottom: -100px;
+    right: 30px;
+    background-color: #121216;
+    border-left: 5px solid #ff9f1c;
+    padding: 20px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: bottom 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2000;
+}
+
+.toast-banner.reveal {
+    bottom: 30px;
+}
+
+.toast-icon {
+    font-size: 24px;
+}
+
+.toast-banner h4 {
+    margin-bottom: 2px;
+}
+
+.toast-banner p {
+    color: #a0a0ab;
+    font-size: 13px;
+}
+
+/* Mobile Responsiveness Viewports */
+@media (max-width: 850px) {
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 40px;
+        margin: 30px auto;
+    }
+}

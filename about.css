@@ -1,0 +1,199 @@
+/* Core Structural Properties */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: #0b0b0d;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Header Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #121216;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+}
+
+.nav-logo {
+    font-size: 26px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.nav-logo span {
+    color: #ff9f1c;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #a0a0ab;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #ff9f1c;
+}
+
+/* Content Container Layout */
+.about-wrapper {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* Section 1: Story Split */
+.story-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+}
+
+.story-text {
+    flex: 1;
+}
+
+.sub-title {
+    color: #ff9f1c;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.story-text h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.story-text p {
+    color: #a0a0ab;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.story-image-box {
+    flex: 1;
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.story-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Section 2: Dashboard Statistics Panel */
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    background-color: #121216;
+    padding: 40px;
+    border-radius: 12px;
+    margin-bottom: 80px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.stat-card h2 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #ff9f1c;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    color: #a0a0ab;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Section 3: Team Showcases */
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    background-color: #121216;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 280px;
+    text-align: center;
+    padding-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.team-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.team-card p {
+    color: #ff9f1c;
+    font-size: 14px;
+}
+
+/* Responsive Rules for Small Devices */
+@media (max-width: 820px) {
+    .story-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .story-image-box {
+        width: 100%;
+        height: 300px;
+    }
+    .stats-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
